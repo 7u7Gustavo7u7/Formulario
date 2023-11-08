@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport">
     <title>Gustavo Dev</title>
+    <link rel="preload" href="CSS/normalize.css" as="Style">
+    <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Krub:wght@700&family=Lato:ital,wght@1,900&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="preload" href="CSS/normalize.css" as="Style">
-    <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="preload" href="CSS/Style.css" as="Style">
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
@@ -17,19 +17,23 @@
 <body>
     <header>
         <h1 class="titulo">Wilberth <span>Developer</span></h1>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About me</a></li>
-                <li><a href="">Clients</a></li>
-                <li><a href="">Contact me</a></li>
-            </ul>
-        </nav>
+        <div class="nav-bag">
+            <nav class="navegacion-Principal container">
+               
+                    <a href="">Inicio</a>
+                    <a href="">Acerca de</a>
+                    <a href="">Clientes</a>
+                    <a href="">Contacto</a>
+                
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2 class="titulo">Design and Web development freelancer</h2>
+        <section class="hero">
+            <div class="contenido-hero">
+            <h2>Diseño y desarrollo web</h2>
+            <div class="ubicacion">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="44" height="44"
                 viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
@@ -37,8 +41,11 @@
                 <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                 <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
             </svg>
-            <p>Mérida, México</p>
-
+            <p>Mérida, Yucatan</p>
+            </div>
+            <a class="boton" href="#">Contactar</a>
+        </div>
+        </section>
             <h2>Mis servicios </h2>
             <section>
                 <h3>Servicios Web</h3>
@@ -64,7 +71,7 @@
                 </p>
             </section>
 
-        </section>
+       
 
     </main>
 

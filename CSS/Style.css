@@ -7,16 +7,105 @@
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+*::before *::after{
+    box-sizing: inherit;
 }
 body{
     font-size: 16px;
     font-family:'krub', sans-serif;
 }
-.titulo{
-    text-align: center;
+/*Tipografia*/
+h1{
     font-size: 3.8rem;
-    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h3, h2, h1{
+    text-align: center;
 }
 .titulo span{
     font-size: 2rem;
+}
+.container{
+    max-width:128rem;
+    margin: 0 auto;
+
+}
+.nav-bag{
+    background-color: var(--secundario);
+}
+.navegacion-Principal{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    font-weight: bold;
+    font-size: 2rem;
+    align-items: center;
+
+}
+.navegacion-Principal a{
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--blanco);
+}
+.navegacion-Principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+@media (min-width: 768px) {
+    .navegacion-Principal{
+        flex-direction: row;
+        background-color: #0097a7;
+    }
+}
+
+/*hero*/
+.hero{
+    background-image: url(../img/hero\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;/* el padre debe ser el relativo*/
+}
+.contenido-hero{
+    position: absolute;/* el hijo debe ser el absoluto*/
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+    /*Para alinear vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2, .contenido-hero p{
+    color: var(--blanco);
+}
+.ubicacion{
+    display: flex;
+    align-items:flex-end;
+}
+.boton{
+    background-color: var(--secundario);/*Fondo del boton*/
+    text-decoration: none; /*Para quitar la barra de abajo de la letra*/
+    padding: 1rem 3rem;/*margenes internos*/
+    border-radius: .5rem;/*esquinas redondeadas*/
+    color: var(--blanco);/*el color de la letras*/
+    margin-top: 3rem;/*margen hacia arriba*/
+    font-weight: bold;/*los negritas*/
+    font-size: 2rem;/*tamaño de la letra*/
+    text-transform: uppercase;/*poner todo en mayusculas*/
+    text-align: center;/*Centrar el texto*/
+    width: 90%;/*ancho del boton que agarre un 90% si la pantalla es pequeña*/
+}
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
 }
